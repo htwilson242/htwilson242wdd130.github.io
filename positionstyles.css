@@ -112,7 +112,7 @@
   grid-template-columns: 1fr 1fr;
 
   /* 20px-ish gutter between columns/rows */
-  gap: 20px;
+  gap: 0px;
 }
 
 /* Make items fill the grid cell so the “blocks” look like the example */
