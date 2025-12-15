@@ -208,56 +208,57 @@
 
 /* =========================
    Activity 5
-   Goal: Wrap text around a square.
-   The hint says: use float (NOT grid).
+   Goal: Green box floats ABOVE yellow text,
+         and text wraps around it.
    ========================= */
 .content5 {
-  height: 400px; /* given */
+  height: 400px;
 }
 
-/* Red bar at the top */
+/* Top red bar */
 .red5 {
   width: 100%;
   height: 100px;
   background-color: red;
 }
 
-/* The square we want text to wrap around */
+/* Floating green square (text wraps around this) */
 .green5 {
   width: 100px;
   height: 100px;
   background-color: green;
 
-  /* Float makes inline content (text) wrap around it */
+  /* This is the key */
   float: left;
 
-  /* Add breathing room so the text isn't glued to it */
+  /* Space between the square and the text */
   margin: 0 15px 10px 0;
 }
 
-/* The text block */
+/* Text container */
 .yellow5 {
-  /* Let the text determine height */
-  width: auto;
-  height: auto;
   background-color: gold;
 
-  /* Optional: a little padding looks closer to examples */
+  /* Let text determine height */
+  width: auto;
+  height: auto;
+
+  /* Padding matches the example look */
   padding: 10px;
 
-  /* Keep the gold block from collapsing awkwardly around floats */
-  overflow: auto;
+  /* DO NOT clear the float here */
 }
 
-/* Blue bar at the bottom */
+/* Bottom blue bar */
 .blue5 {
   width: 100%;
   height: 100px;
   background-color: blue;
 
-  /* Stop the float so blue sits below the wrapped text area */
+  /* Stop the float so blue stays at the bottom */
   clear: both;
 }
+
 
 /* =========================
    Activity 6
