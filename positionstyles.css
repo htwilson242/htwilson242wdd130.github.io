@@ -1,207 +1,317 @@
 /* CSS - Name: "positionstyles.css" */
 
-/* Activity 1 styles */
+/* =========================
+   Activity 1
+   Goal: 2-column grid, red/blue full width, green/yellow centered with gaps.
+   ========================= */
 .content1 {
-  /* This is the parent of the activity 1 boxes. */
+  /* Turn the parent into a grid container */
   display: grid;
+
+  /* Two equal columns */
   grid-template-columns: 1fr 1fr;
+
+  /* Center the smaller boxes inside their grid cells */
   justify-items: center;
+
+  /* Space between rows and columns */
   gap: 20px;
 }
+
 .red1 {
+  /* Full width across both columns */
   width: 100%;
   height: 100px;
   background-color: red;
-  grid-column: 1/3;
+
+  /* Span column line 1 to line 3 (both columns) */
+  grid-column: 1 / 3;
 }
+
 .green1 {
+  /* The green boxes are bigger squares */
   width: 200px;
   height: 200px;
   background-color: green;
 }
+
 .yellow1 {
+  /* The yellow boxes are bigger squares */
   width: 200px;
   height: 200px;
   background-color: gold;
 }
+
 .blue1 {
+  /* Full width across both columns */
   width: 100%;
   height: 100px;
   background-color: blue;
-  grid-column: 1/3;
+
+  /* Span both columns */
+  grid-column: 1 / 3;
 }
 
-/* Activity 2 styles */
+/* =========================
+   Activity 2
+   Goal: Overlap and stagger 4 squares.
+   Hint suggests margin-top/left (negative margin is allowed).
+   ========================= */
 .content2 {
-  /* This is the parent of the activity 2 boxes. */
+  /* No grid required for this one */
 }
+
 .red2 {
   width: 100px;
   height: 100px;
   background-color: red;
+
+  /* First square stays in normal flow */
 }
+
 .green2 {
   width: 100px;
   height: 100px;
   background-color: green;
-  margin-top: -50px;
+
+  /* Move right and overlap upward */
   margin-left: 50px;
+  margin-top: -50px;
 }
+
 .yellow2 {
   width: 100px;
   height: 100px;
   background-color: gold;
-  margin-top: -50px;
+
+  /* Continue the stagger */
   margin-left: 100px;
+  margin-top: -50px;
 }
+
 .blue2 {
   width: 100px;
   height: 100px;
   background-color: blue;
-  margin-top: -50px;
+
+  /* Final stagger */
   margin-left: 150px;
+  margin-top: -50px;
 }
 
-/* Activity 3 styles */
+/* =========================
+   Activity 3
+   Goal: 2-column layout: red full width top, blue full width bottom,
+         green left middle, yellow right middle, with a visible gap.
+   Best solved with Grid.
+   ========================= */
 .content3 {
-  /* This is the parent of the activity 3 boxes. */
   display: grid;
-  grid-template-columns: 1fr 80px 1fr; /* the white gap */
-  grid-template-rows: 100px 200px 100px;
+
+  /* Two equal columns */
+  grid-template-columns: 1fr 1fr;
+
+  /* 20px-ish gutter between columns/rows */
+  gap: 20px;
 }
-.red3 {
-  width: 100%;
-  height: 100%;
-  background-color: red;
-  grid-column: 1/4;
-}
-.green3 {
-  width: 100%;
-  height: 100%;
-  background-color: green;
-  grid-column: 1/2;
-  grid-row: 2/3;
-}
-.yellow3 {
-  width: 100%;
-  height: 100%;
-  background-color: gold;
-  grid-column: 3/4;
-  grid-row: 2/3;
-}
+
+/* Make items fill the grid cell so the “blocks” look like the example */
+.red3,
+.green3,
+.yellow3,
 .blue3 {
   width: 100%;
-  height: 100%;
-  background-color: blue;
-  grid-column: 1/4;
-  grid-row: 3/4;
 }
 
-/* Activity 4 styles */
-.content4 {
-  /* This is the parent of the activity 4 boxes. */
-  height: 400px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 2fr 3fr 3fr; /* 100 / 150 / 150 look */
-}
-.red4 {
-  width: 100%;
-  height: 100%;
+/* Top bar */
+.red3 {
+  height: 100px;
   background-color: red;
-  grid-column: 1/2;
-  grid-row: 1/4;
-}
-.green4 {
-  width: 100%;
-  height: 100%;
-  background-color: green;
-  grid-column: 2/3;
-  grid-row: 1/2;
-}
-.yellow4 {
-  width: 100%;
-  height: 100%;
-  background-color: gold;
-  grid-column: 2/3;
-  grid-row: 2/3;
-}
-.blue4 {
-  width: 100%;
-  height: 100%;
-  background-color: blue;
-  grid-column: 2/3;
-  grid-row: 3/4;
+  grid-column: 1 / 3; /* span both columns */
 }
 
-/* Activity 5 styles */
-.content5 {
-  /* This is the parent of the activity 5 boxes. */
-  height: 400px;
+/* Middle left */
+.green3 {
+  height: 200px;
+  background-color: green;
+  grid-column: 1 / 2;
 }
+
+/* Middle right */
+.yellow3 {
+  height: 200px;
+  background-color: gold;
+  grid-column: 2 / 3;
+}
+
+/* Bottom bar */
+.blue3 {
+  height: 100px;
+  background-color: blue;
+  grid-column: 1 / 3; /* span both columns */
+}
+
+/* =========================
+   Activity 4
+   Goal: Tall red block on the left, and on the right:
+         green top, yellow middle, blue bottom.
+   Must control HEIGHT (grid rows).
+   ========================= */
+.content4 {
+  height: 400px; /* given */
+  display: grid;
+
+  /* Two columns: left is red, right is stacked */
+  grid-template-columns: 1fr 1fr;
+
+  /* Three rows that add up to 400px:
+     100 (top) + 200 (middle) + 100 (bottom)
+  */
+  grid-template-rows: 100px 200px 100px;
+}
+
+.red4 {
+  background-color: red;
+
+  /* Left column, spanning all three rows */
+  grid-column: 1 / 2;
+  grid-row: 1 / 4;
+
+  /* Fill its grid area */
+  width: 100%;
+  height: 100%;
+}
+
+.green4 {
+  background-color: green;
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  width: 100%;
+  height: 100%;
+}
+
+.yellow4 {
+  background-color: gold;
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  width: 100%;
+  height: 100%;
+}
+
+.blue4 {
+  background-color: blue;
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
+  width: 100%;
+  height: 100%;
+}
+
+/* =========================
+   Activity 5
+   Goal: Wrap text around a square.
+   The hint says: use float (NOT grid).
+   ========================= */
+.content5 {
+  height: 400px; /* given */
+}
+
+/* Red bar at the top */
 .red5 {
   width: 100%;
   height: 100px;
   background-color: red;
 }
+
+/* The square we want text to wrap around */
 .green5 {
   width: 100px;
   height: 100px;
   background-color: green;
+
+  /* Float makes inline content (text) wrap around it */
   float: left;
-  margin: 0; /* touches the red like the example */
+
+  /* Add breathing room so the text isn't glued to it */
+  margin: 0 15px 10px 0;
 }
+
+/* The text block */
 .yellow5 {
-  width: 100%;
-  height: 200px; /* 400 - 100 red - 100 blue */
+  /* Let the text determine height */
+  width: auto;
+  height: auto;
   background-color: gold;
+
+  /* Optional: a little padding looks closer to examples */
+  padding: 10px;
+
+  /* Keep the gold block from collapsing awkwardly around floats */
+  overflow: auto;
 }
+
+/* Blue bar at the bottom */
 .blue5 {
   width: 100%;
   height: 100px;
   background-color: blue;
+
+  /* Stop the float so blue sits below the wrapped text area */
   clear: both;
 }
 
-/* Activity 6 styles */
+/* =========================
+   Activity 6
+   Goal: Overlapping blocks on a 100px grid.
+   Hint: use grid + z-index, and sizes are multiples of 100.
+   ========================= */
 .content6 {
-  /* This is the parent of the activity 6 boxes. */
   display: grid;
+
+  /* 6 columns x 6 rows of 100px each */
   grid-template-columns: repeat(6, 100px);
   grid-template-rows: repeat(6, 100px);
 }
+
+/* Red: large block near top-left */
 .red6 {
+  background-color: red;
+  grid-column: 1 / 5; /* 4 columns wide (400px) */
+  grid-row: 1 / 3;    /* 2 rows tall (200px) */
   width: 100%;
   height: 100%;
-  background-color: red;
-  grid-column: 1/5; /* 400px wide */
-  grid-row: 1/3;    /* 200px tall */
   z-index: 1;
 }
+
+/* Blue: big square overlapping center */
 .blue6 {
+  background-color: blue;
+  grid-column: 2 / 6; /* 4 columns wide */
+  grid-row: 2 / 6;    /* 4 rows tall */
   width: 100%;
   height: 100%;
-  background-color: blue;
-  grid-column: 2/6; /* 400px */
-  grid-row: 2/6;    /* 400px */
   z-index: 2;
 }
+
+/* Yellow: tall block on the right */
 .yellow6 {
+  background-color: gold;
+  grid-column: 5 / 7; /* 2 columns wide (200px); grid allows this */
+  grid-row: 3 / 7;    /* 4 rows tall (400px) */
   width: 100%;
   height: 100%;
-  background-color: gold;
-  grid-column: 5/7; /* 200px on the right */
-  grid-row: 3/7;    /* down to the bottom */
   z-index: 3;
 }
+
+/* Green: bottom-left block (often overlaps blue) */
 .green6 {
+  background-color: green;
+  grid-column: 1 / 3; /* 2 columns wide */
+  grid-row: 5 / 7;    /* 2 rows tall */
   width: 100%;
   height: 100%;
-  background-color: green;
-  grid-column: 1/3; /* 200px */
-  grid-row: 5/7;    /* 200px */
-  z-index: 4;       /* sits on top where it overlaps blue */
+  z-index: 4; /* ensure it sits on top where overlap happens */
 }
+
 
 /* Do not make any changes below here */
 .activity {
