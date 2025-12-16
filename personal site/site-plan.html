@@ -1,0 +1,175 @@
+<!-- =========================
+     Wilson Wealth Management
+     WIREFRAME HTML (WDD 130-friendly)
+     Author: Hayden Wilson
+     ========================= -->
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Wilson Wealth Management | Home</title>
+
+  <!-- Wireframe-only styles (simple boxes). Replace with your real CSS later. -->
+  <style>
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,Arial,sans-serif;line-height:1.4}
+    .wrap{max-width:1100px;margin:0 auto;padding:16px}
+    .box{border:2px dashed #888;border-radius:10px;padding:14px;background:#f7f7f7}
+    .stack{display:grid;gap:16px}
+    header .grid{display:grid;grid-template-columns:180px 1fr;gap:16px;align-items:center}
+    nav ul{list-style:none;display:flex;gap:12px;padding:0;margin:0;flex-wrap:wrap}
+    nav a{display:block;padding:8px 10px;border:2px dashed #888;border-radius:8px;color:#111;text-decoration:none;background:#fff}
+    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:16px}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    footer .grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    @media (max-width:850px){
+      header .grid,.hero,.cards,.two-col,footer .grid{grid-template-columns:1fr}
+    }
+    .muted{font-size:.95rem;color:#444}
+  </style>
+</head>
+
+<body>
+  <!-- ===== Header / Nav ===== -->
+  <header class="wrap stack">
+    <div class="grid">
+      <div class="box" aria-label="Logo area">
+        <strong>LOGO</strong><br />
+        <span class="muted">Wilson Wealth Management</span>
+      </div>
+
+      <nav class="box" aria-label="Primary navigation">
+        <strong>NAV</strong>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="insights.html">Insights</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== Main Content ===== -->
+  <main class="wrap stack">
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="box">
+        <h1>Hero Headline</h1>
+        <p class="muted">Short value statement about portfolio management and long-term planning.</p>
+        <div class="box" style="background:#fff">
+          <strong>Primary CTA Button</strong> (Request a Consultation)
+        </div>
+      </div>
+
+      <div class="box">
+        <strong>Hero Image / Illustration</strong>
+        <p class="muted">Placeholding area for a professional photo or brand image.</p>
+      </div>
+    </section>
+
+    <!-- SERVICES HIGHLIGHTS (3 cards) -->
+    <section class="box">
+      <h2>Service Highlights</h2>
+      <div class="cards">
+        <article class="box" style="background:#fff">
+          <h3>Portfolio Management</h3>
+          <p class="muted">Ongoing management, rebalancing, and review.</p>
+        </article>
+
+        <article class="box" style="background:#fff">
+          <h3>One-Time Portfolio Review</h3>
+          <p class="muted">Second opinion and risk/fees analysis.</p>
+        </article>
+
+        <article class="box" style="background:#fff">
+          <h3>Goal & Retirement Planning</h3>
+          <p class="muted">Plan aligned to your timeline and priorities.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="box">
+      <h2>How It Works</h2>
+      <div class="two-col">
+        <div class="box" style="background:#fff">
+          <h3>Step 1: Discover</h3>
+          <p class="muted">Learn goals, time horizon, and risk comfort.</p>
+        </div>
+        <div class="box" style="background:#fff">
+          <h3>Step 2: Plan</h3>
+          <p class="muted">Build an allocation and strategy.</p>
+        </div>
+        <div class="box" style="background:#fff">
+          <h3>Step 3: Manage</h3>
+          <p class="muted">Implement, monitor, rebalance.</p>
+        </div>
+        <div class="box" style="background:#fff">
+          <h3>Step 4: Review</h3>
+          <p class="muted">Regular check-ins and adjustments.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRUST / CREDIBILITY -->
+    <section class="box">
+      <h2>Why Wilson Wealth Management</h2>
+      <div class="two-col">
+        <div class="box" style="background:#fff">
+          <h3>Investment Philosophy</h3>
+          <p class="muted">Evidence-based, diversified, long-term approach.</p>
+        </div>
+        <div class="box" style="background:#fff">
+          <h3>Transparency</h3>
+          <p class="muted">Clear communication, simple process, no hype.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECOND CTA -->
+    <section class="box">
+      <h2>Ready to talk?</h2>
+      <p class="muted">Short line encouraging visitors to reach out.</p>
+      <div class="box" style="background:#fff">
+        <strong>CTA Button</strong> (Schedule / Contact)
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="wrap stack">
+    <div class="box">
+      <div class="grid">
+        <div class="box" style="background:#fff">
+          <strong>Contact Info</strong>
+          <p class="muted">Email • Phone (optional) • Location (optional)</p>
+        </div>
+        <div class="box" style="background:#fff">
+          <strong>Links</strong>
+          <p class="muted">Privacy Policy • Social (LinkedIn/GitHub) • Disclosures</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="box">
+      <strong>Disclaimer</strong>
+      <p class="muted">
+        For informational purposes only. Not financial, investment, or legal advice.
+        Investing involves risk, including possible loss of principal.
+      </p>
+      <p class="muted">© <span id="year"></span> Wilson Wealth Management • Hayden Wilson</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
