@@ -1,9 +1,3 @@
-<!-- =========================
-     Wilson Wealth Management
-     WIREFRAME HTML (WDD 130-friendly)
-     Author: Hayden Wilson
-     ========================= -->
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -11,39 +5,24 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Wilson Wealth Management | Home</title>
 
-  <!-- Wireframe-only styles (simple boxes). Replace with your real CSS later. -->
-  <style>
-    *{box-sizing:border-box}
-    body{margin:0;font-family:system-ui,Arial,sans-serif;line-height:1.4}
-    .wrap{max-width:1100px;margin:0 auto;padding:16px}
-    .box{border:2px dashed #888;border-radius:10px;padding:14px;background:#f7f7f7}
-    .stack{display:grid;gap:16px}
-    header .grid{display:grid;grid-template-columns:180px 1fr;gap:16px;align-items:center}
-    nav ul{list-style:none;display:flex;gap:12px;padding:0;margin:0;flex-wrap:wrap}
-    nav a{display:block;padding:8px 10px;border:2px dashed #888;border-radius:8px;color:#111;text-decoration:none;background:#fff}
-    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:16px}
-    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-    footer .grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-    @media (max-width:850px){
-      header .grid,.hero,.cards,.two-col,footer .grid{grid-template-columns:1fr}
-    }
-    .muted{font-size:.95rem;color:#444}
-  </style>
+  <!-- Base palette + fonts (your provided file) -->
+  <link rel="stylesheet" href="styles/site-plan.css" />
+
+  <!-- Your actual site styling + layout (matches the wireframe structure) -->
+  <link rel="stylesheet" href="styles/site.css" />
 </head>
 
 <body>
   <!-- ===== Header / Nav ===== -->
-  <header class="wrap stack">
-    <div class="grid">
-      <div class="box" aria-label="Logo area">
-        <strong>LOGO</strong><br />
-        <span class="muted">Wilson Wealth Management</span>
-      </div>
+  <header class="site-header">
+    <div class="wrap header-grid">
+      <a class="logo" href="index.html" aria-label="Wilson Wealth Management Home">
+        <!-- Replace src with your saved logo file path -->
+        <img src="images/wilson-wealth-logo.png" alt="Wilson Wealth Management logo" />
+      </a>
 
-      <nav class="box" aria-label="Primary navigation">
-        <strong>NAV</strong>
-        <ul>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <ul class="nav-list">
           <li><a href="index.html">Home</a></li>
           <li><a href="services.html">Services</a></li>
           <li><a href="about.html">About</a></li>
@@ -59,112 +38,111 @@
 
     <!-- HERO -->
     <section class="hero">
-      <div class="box">
-        <h1>Hero Headline</h1>
-        <p class="muted">Short value statement about portfolio management and long-term planning.</p>
-        <div class="box" style="background:#fff">
-          <strong>Primary CTA Button</strong> (Request a Consultation)
+      <div class="hero-copy">
+        <h1>Wilson Wealth Management</h1>
+        <p>
+          Portfolio management built for long-term goals—clear strategy, disciplined investing,
+          and consistent reviews.
+        </p>
+
+        <div class="cta-row">
+          <a class="btn" href="contact.html">Request a Consultation</a>
+          <a class="btn btn-outline" href="services.html">View Services</a>
         </div>
       </div>
 
-      <div class="box">
-        <strong>Hero Image / Illustration</strong>
-        <p class="muted">Placeholding area for a professional photo or brand image.</p>
+      <div class="hero-media" aria-label="Hero image area">
+        <div class="media-box">
+          Hero Image / Brand Photo
+        </div>
       </div>
     </section>
 
-    <!-- SERVICES HIGHLIGHTS (3 cards) -->
-    <section class="box">
-      <h2>Service Highlights</h2>
+    <!-- SERVICES HIGHLIGHTS -->
+    <section class="section">
+      <h2>Services</h2>
       <div class="cards">
-        <article class="box" style="background:#fff">
+        <article class="card">
           <h3>Portfolio Management</h3>
-          <p class="muted">Ongoing management, rebalancing, and review.</p>
+          <p>Ongoing management, rebalancing, and periodic review.</p>
         </article>
 
-        <article class="box" style="background:#fff">
-          <h3>One-Time Portfolio Review</h3>
-          <p class="muted">Second opinion and risk/fees analysis.</p>
+        <article class="card">
+          <h3>Portfolio Review</h3>
+          <p>A second opinion on risk, fees, and diversification.</p>
         </article>
 
-        <article class="box" style="background:#fff">
-          <h3>Goal & Retirement Planning</h3>
-          <p class="muted">Plan aligned to your timeline and priorities.</p>
+        <article class="card">
+          <h3>Goal Planning</h3>
+          <p>Align your investments to retirement and other milestones.</p>
         </article>
       </div>
     </section>
 
     <!-- HOW IT WORKS -->
-    <section class="box">
+    <section class="section band">
       <h2>How It Works</h2>
+
       <div class="two-col">
-        <div class="box" style="background:#fff">
-          <h3>Step 1: Discover</h3>
-          <p class="muted">Learn goals, time horizon, and risk comfort.</p>
+        <div class="card">
+          <h3>1) Discover</h3>
+          <p>Understand goals, timeline, and risk comfort.</p>
         </div>
-        <div class="box" style="background:#fff">
-          <h3>Step 2: Plan</h3>
-          <p class="muted">Build an allocation and strategy.</p>
+        <div class="card">
+          <h3>2) Plan</h3>
+          <p>Create a strategy designed for your priorities.</p>
         </div>
-        <div class="box" style="background:#fff">
-          <h3>Step 3: Manage</h3>
-          <p class="muted">Implement, monitor, rebalance.</p>
+        <div class="card">
+          <h3>3) Manage</h3>
+          <p>Implement, monitor, and rebalance responsibly.</p>
         </div>
-        <div class="box" style="background:#fff">
-          <h3>Step 4: Review</h3>
-          <p class="muted">Regular check-ins and adjustments.</p>
+        <div class="card">
+          <h3>4) Review</h3>
+          <p>Check-ins and adjustments as life changes.</p>
         </div>
       </div>
     </section>
 
-    <!-- TRUST / CREDIBILITY -->
-    <section class="box">
+    <!-- TRUST -->
+    <section class="section">
       <h2>Why Wilson Wealth Management</h2>
       <div class="two-col">
-        <div class="box" style="background:#fff">
+        <div class="card">
           <h3>Investment Philosophy</h3>
-          <p class="muted">Evidence-based, diversified, long-term approach.</p>
+          <p>Long-term, diversified, evidence-based decision making.</p>
         </div>
-        <div class="box" style="background:#fff">
+        <div class="card">
           <h3>Transparency</h3>
-          <p class="muted">Clear communication, simple process, no hype.</p>
+          <p>Clear communication, simple process, no hype.</p>
         </div>
       </div>
     </section>
 
-    <!-- SECOND CTA -->
-    <section class="box">
+    <!-- CTA -->
+    <section class="section cta">
       <h2>Ready to talk?</h2>
-      <p class="muted">Short line encouraging visitors to reach out.</p>
-      <div class="box" style="background:#fff">
-        <strong>CTA Button</strong> (Schedule / Contact)
-      </div>
+      <p>Schedule a consultation and we’ll map the next steps together.</p>
+      <a class="btn" href="contact.html">Contact Hayden</a>
     </section>
 
   </main>
 
   <!-- ===== Footer ===== -->
-  <footer class="wrap stack">
-    <div class="box">
-      <div class="grid">
-        <div class="box" style="background:#fff">
-          <strong>Contact Info</strong>
-          <p class="muted">Email • Phone (optional) • Location (optional)</p>
-        </div>
-        <div class="box" style="background:#fff">
-          <strong>Links</strong>
-          <p class="muted">Privacy Policy • Social (LinkedIn/GitHub) • Disclosures</p>
-        </div>
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div>
+        <h3>Contact</h3>
+        <p>Email: hayden@example.com<br />Location: Idaho (optional)</p>
       </div>
-    </div>
 
-    <div class="box">
-      <strong>Disclaimer</strong>
-      <p class="muted">
-        For informational purposes only. Not financial, investment, or legal advice.
-        Investing involves risk, including possible loss of principal.
-      </p>
-      <p class="muted">© <span id="year"></span> Wilson Wealth Management • Hayden Wilson</p>
+      <div>
+        <h3>Disclaimer</h3>
+        <p class="small">
+          For informational purposes only. Not financial, investment, or legal advice.
+          Investing involves risk, including possible loss of principal.
+        </p>
+        <p class="small">© <span id="year"></span> Wilson Wealth Management • Hayden Wilson</p>
+      </div>
     </div>
   </footer>
 
