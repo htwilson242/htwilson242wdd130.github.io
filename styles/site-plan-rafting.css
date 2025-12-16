@@ -44,87 +44,87 @@ body {
    HEADER GRID (required)
    header is the grid container
    ===================================== */
-header {
-  background-color: var(--paragraph-background-color);
-  color: var(--paragraph-color-on-color);
-
+/* ===== Header overlay look (matches example) ===== */
+header{
   display: grid;
-  grid-template-columns: 150px auto; /* required */
+  grid-template-columns: 150px auto;
 
-  /* optional spacing */
-  padding: 10px;
+  /* dark translucent bar over the image */
+  background-color: rgba(0, 0, 0, 0.55);
+
+  /* keep header above hero image */
+  position: relative;
+  z-index: 10;
 }
 
-#logo_link {
+/* center logo inside its grid cell */
+#logo_link{
+  justify-self: center;
+  align-self: center;
   padding-top: 5px;
-  justify-self: center; /* required */
-  align-self: center;   /* required */
 }
 
-.logo {
-  width: 80px;
-  height: auto;
-}
-
-/* NAV FLEX (required) */
-nav {
-  background-color: var(--nav-background-color);
-  display: flex;                 /* required */
-  justify-content: space-around; /* required */
+/* Nav should NOT have a bright background in the example */
+nav{
+  background: transparent;        /* IMPORTANT */
+  display: flex;
+  justify-content: space-around;
   align-items: center;
 }
 
-nav a {
-  color: var(--nav-link-color);
+/* nav links in the example are light */
+nav a{
+  color: white;
   text-decoration: none;
-  font-weight: bold;
   padding: 35px;
 }
 
-nav a:hover {
-  color: var(--nav-hover-link-color);
-  background-color: var(--nav-hover-background-color);
-  padding: 0.5em 1em;
+/* optional: hover similar to sample */
+nav a:hover{
+  background-color: rgba(255,255,255,0.15);
   border-radius: 5px;
 }
 
-/* =====================================
-   HERO GRID (required)
-   ===================================== */
-#hero {
+/* ===== Hero grid + overlap ===== */
+#hero{
   display: grid;
-  grid-template-columns: 1fr 3fr 1fr; /* required */
-  margin-top: -100px;                 /* required overlap step */
+  grid-template-columns: 1fr 3fr 1fr;
+
+  /* pulls hero up behind the header */
+  margin-top: -110px; /* if needed change to -100px or -120px */
 }
 
-#hero-box {
-  grid-column: 1 / 4; /* required */
-  grid-row: 1 / 3;    /* required */
-  z-index: -1;        /* required so header stays on top */
+#hero-box{
+  grid-column: 1/4;
+  grid-row: 1/3;
+
+  /* send hero image behind header */
+  position: relative;
+  z-index: -1;
 }
 
-#hero-img {
-  width: 100%; /* required */
+#hero-img{
+  width: 100%;
   display: block;
 }
 
-/* place hero message over image */
-#hero-msg {
-  grid-column: 2 / 3; /* required placement */
-  grid-row: 1 / 2;
-  margin-top: 100px;  /* required */
+#hero-msg{
+  grid-column: 2/3;
+  grid-row: 1/2;
+
+  /* push text down so it clears the nav area */
+  margin-top: 140px; /* adjust until it matches the sample */
   text-align: center;
+
+  position: relative;
+  z-index: 1;
 }
 
-#hero-msg h1 {
-  font-family: var(--heading-font);
-  color: var(--headline-color-on-color);
-  margin: 0;
+#hero-msg h1,
+#hero-msg h4{
+  color: white;
 }
 
-#hero-msg h4 {
-  color: white; /* suggested in instructions for contrast */
-}
 
 .button-box { text-align: center; }
 
