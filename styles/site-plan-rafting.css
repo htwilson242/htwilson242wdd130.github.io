@@ -153,54 +153,42 @@ nav a:hover {
 /* =====================================
    MAIN GRID (required)
    ===================================== */
+/* MAIN GRID (make sure this exists) */
 .home-grid {
   display: grid;
-  grid-template-columns: repeat(10, 1fr); /* required */
-  gap: 0; /* matches the wireframe look */
-  max-width: 1200px;
-  margin: 0 auto;
+  grid-template-columns: repeat(10, 1fr);
 }
 
-/* required: images should size within grid */
-.card-img, .mountains {
-  width: 100%;
-}
-
-/* Card placements (required) */
-.rivers-card {
-  grid-column: 2 / 4;
-  grid-row: 2 / 3;
-}
-
-.camping-card {
-  grid-column: 5 / 7;
-  grid-row: 2 / 3;
-}
-
-.rapids-card {
-  grid-column: 8 / 10;
-  grid-row: 2 / 3;
-}
-
-/* required background placement */
+/* Background block behind both */
 #background {
-  background-color: var(--secondary-color);
   grid-column: 1 / 11;
   grid-row: 4 / 9;
+  background-color: #d9c2a3; /* tan like the example */
 }
 
-/* required placements */
+/* Mountains image on the left */
 .mountains {
+  width: 100%;
   grid-column: 2 / 7;
   grid-row: 5 / 8;
+  box-shadow: 5px 5px 10px #6f7364;
 }
 
+/* Message box overlays the mountains */
 .msg {
-  background-color: #6f7364; /* matches assignment sample */
+  background-color: #6f7364;
   padding: 35px;
-  grid-column: 6 / 10;
-  grid-row: 6 / 7;
+
+  grid-column: 6 / 10; /* starts inside mountains area */
+  grid-row: 6 / 7;     /* overlaps vertically */
+
+  box-shadow: 5px 5px 10px #6f7364;
+
+  /* KEY: layer it above the image */
+  position: relative;
+  z-index: 2;
 }
+
 
 /* =====================================
    ENHANCEMENTS (recommended)
