@@ -39,11 +39,30 @@ body{
   gap: 16px;
 }
 
+/* ===== Logo ===== */
+.logo{
+  display: flex;
+  align-items: center;
+}
+
 .logo img{
-  width: 120px;
+  width: 120px;      /* desktop size */
+  max-width: 100%;
   height: auto;
   display: block;
 }
+
+/* Smaller screens */
+@media (max-width: 850px){
+  .logo{
+    justify-content: center;
+  }
+
+  .logo img{
+    width: 100px;
+  }
+}
+
 
 /* Fix nav styling (your site-plan.css targets nav, but we’re using ul/li) */
 .site-nav{
