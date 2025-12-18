@@ -175,3 +175,80 @@ nav a:hover {
   border-top: 1px solid;
   border-right: 1px solid;
 }
+
+/* =========================
+   WIREFRAME STYLES (W09)
+   ========================= */
+.wireframe{
+  border: 2px solid #999;
+  padding: 18px;
+  margin: 18px 0 28px;
+  background: #fff;
+}
+
+.wf-header, .wf-footer{
+  border: 2px dashed #999;
+  padding: 12px;
+  display: grid;
+  gap: 10px;
+}
+
+.wf-header{
+  grid-template-columns: 120px 1fr;
+  align-items: center;
+}
+
+.wf-logo, .wf-nav{
+  border: 2px dashed #bbb;
+  padding: 10px;
+  background: #f7f7f7;
+}
+
+.wf-hero{
+  margin-top: 14px;
+  display: grid;
+  grid-template-columns: 1.2fr .8fr;
+  gap: 14px;
+}
+
+.wf-section{
+  margin-top: 14px;
+  border: 2px dashed #bbb;
+  padding: 12px;
+  background: #fafafa;
+}
+
+.wf-two-col{
+  margin-top: 14px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.wf-text, .wf-image{
+  border: 2px dashed #bbb;
+  padding: 12px;
+  background: #fff;
+  min-height: 90px;
+}
+
+.wf-cards{
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.wf-card{
+  border: 2px dashed #bbb;
+  padding: 12px;
+  background: #fff;
+  min-height: 60px;
+}
+
+@media (max-width: 800px){
+  .wf-header{grid-template-columns: 1fr;}
+  .wf-hero{grid-template-columns: 1fr;}
+  .wf-two-col{grid-template-columns: 1fr;}
+  .wf-cards{grid-template-columns: 1fr;}
+}
