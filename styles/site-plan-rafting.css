@@ -284,6 +284,10 @@ footer a:hover {
   color: var(--accent1-color);
 }
 
+#siteplan-image {
+    width: 800px;
+}
+
 /* =====================================
    RESPONSIVE MEDIA QUERY (required)
    Must be at the bottom
