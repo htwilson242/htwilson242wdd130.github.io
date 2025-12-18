@@ -285,12 +285,13 @@ footer a:hover {
 }
 
 #siteplan-image {
-  display: flex;
-  justify-content: center; /* horizontal */
-  align-items: center;     /* vertical */
-  width: 800px;
-}
+  background-color: #6f7364; /* required example uses this */
+  padding: 25px 50px;
+  margin-top: 200px;
 
+  display: flex;                 /* required */
+  justify-content: space-around; /* required */
+  align-items: center;    
 }
 
 /* =====================================
