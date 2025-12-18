@@ -285,6 +285,7 @@ footer a:hover {
 }
 
 #siteplan-image {
+    display: grid;
     width: 800px;
     justify-self: center;
 }
