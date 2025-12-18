@@ -288,6 +288,7 @@ footer a:hover {
   background-color: #6f7364; /* required example uses this */
   padding: 25px 50px;
   margin-top: 200px;
+  width: 800px;
 
   display: flex;                 /* required */
   justify-content: space-around; /* required */
