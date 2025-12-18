@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Wilson Wealth Management | Home</title>
+
+  <link rel="stylesheet" href="styles/site-plan.css" />
+  <link rel="stylesheet" href="styles/site.css" />
+</head>
+
+<body>
+  <!-- Header (same on all pages) -->
+  <header class="site-header">
+    <div class="wrap header-grid">
+      <a class="logo" href="index.html" aria-label="Wilson Wealth Management Home">
+        <img src="images/wilsonwealthmanagementlogo.png" alt="Wilson Wealth Management logo" />
+      </a>
+
+      <nav class="site-nav" aria-label="Primary navigation">
+        <ul class="nav-list">
+          <li><a class="active" href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main (unique content per page) -->
+  <main class="wrap stack">
+
+    <section class="hero">
+      <div class="hero-copy">
+        <h1>Wilson Wealth Management</h1>
+        <p>
+          Wilson Wealth Management is focused on disciplined portfolio management and clear,
+          understandable planning. The goal is to help clients invest with purpose, manage risk,
+          and stay consistent over the long term.
+        </p>
+
+        <div class="cta-row">
+          <a class="btn" href="services.html">Explore Services</a>
+          <a class="btn btn-outline" href="about.html">Meet Hayden</a>
+        </div>
+      </div>
+
+      <div class="hero-media">
+        <img src="images/home-hero.jpg" alt="Finance-themed hero image for Wilson Wealth Management" />
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Why people visit</h2>
+      <p>
+        People come to this site to learn what “portfolio management” actually includes, to
+        understand how risk and diversification work, and to find a professional advisor process
+        that is calm and repeatable. Visitors should be able to quickly answer: what the firm does,
+        who the services are for, and how to start a conversation.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>What makes this different</h2>
+      <p>
+        Instead of complicated jargon, the website explains the services in simple language.
+        The focus is on building trust through transparency, clear next steps, and an investment
+        approach designed for long-term goals rather than short-term market noise.
+      </p>
+
+      <img src="images/home-meeting.jpg" alt="Financial planning meeting or consultation image" />
+    </section>
+
+    <section class="section cta">
+      <h2>Next step</h2>
+      <p>
+        Ready to get clarity on your investments? Visit the Services page to see options, then reach
+        out to schedule a consultation.
+      </p>
+      <a class="btn" href="services.html">View Services</a>
+    </section>
+
+  </main>
+
+  <!-- Footer (same on all pages) -->
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div>
+        <h3>Wilson Wealth Management</h3>
+        <p class="small">Portfolio management and long-term planning.</p>
+
+        <!-- Requirement: link to your site plan in the Home footer -->
+        <p class="small">
+          <a href="site-plan.html">View Site Plan</a>
+        </p>
+      </div>
+
+      <div>
+        <h3>Disclaimer</h3>
+        <p class="small">
+          For informational purposes only. Not financial, investment, or legal advice.
+          Investing involves risk, including possible loss of principal.
+        </p>
+        <p class="small">© <span id="year"></span> Wilson Wealth Management • Hayden Wilson</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

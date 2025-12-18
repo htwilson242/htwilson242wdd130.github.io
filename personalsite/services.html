@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Wilson Wealth Management | Services</title>
+
+  <link rel="stylesheet" href="styles/site-plan.css" />
+  <link rel="stylesheet" href="styles/site.css" />
+</head>
+
+<body>
+  <!-- Header (same on all pages) -->
+  <header class="site-header">
+    <div class="wrap header-grid">
+      <a class="logo" href="index.html" aria-label="Wilson Wealth Management Home">
+        <img src="images/wilsonwealthmanagementlogo.png" alt="Wilson Wealth Management logo" />
+      </a>
+
+      <nav class="site-nav" aria-label="Primary navigation">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a class="active" href="services.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main class="wrap stack">
+    <section class="section">
+      <h1>Services</h1>
+      <p>
+        This page explains the main services offered by Wilson Wealth Management. The goal is to help
+        visitors quickly understand what each service includes and what outcomes to expect.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>Portfolio Management</h2>
+      <p>
+        Portfolio management includes building a strategy, selecting an appropriate mix of investments,
+        and keeping the portfolio aligned to your goals through monitoring and rebalancing. The focus is
+        long-term consistency, risk control, and decision-making based on a plan rather than emotion.
+      </p>
+      <img src="images/services-chart.jpg" alt="Chart or portfolio concept image" />
+    </section>
+
+    <section class="section band">
+      <h2>One-Time Portfolio Review</h2>
+      <p>
+        A portfolio review is a second opinion designed to help identify concentration risk, unnecessary
+        complexity, and potential fee concerns. You receive a clear summary of what is working, what can
+        be improved, and what changes could better match your timeline and comfort level.
+      </p>
+      <img src="images/services-planning.jpg" alt="Financial planning workspace image" />
+    </section>
+
+    <section class="section">
+      <h2>Helpful links</h2>
+      <p>Learn more about the firm and process:</p>
+      <ul>
+        <li><a href="about.html">About Hayden Wilson</a></li>
+        <li><a href="index.html">Return to Home</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- Footer (same on all pages) -->
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <div>
+        <h3>Wilson Wealth Management</h3>
+        <p class="small">Portfolio management and long-term planning.</p>
+        <p class="small"><a href="site-plan.html">View Site Plan</a></p>
+      </div>
+
+      <div>
+        <h3>Disclaimer</h3>
+        <p class="small">
+          For informational purposes only. Not financial, investment, or legal advice.
+          Investing involves risk, including possible loss of principal.
+        </p>
+        <p class="small">© <span id="year"></span> Wilson Wealth Management • Hayden Wilson</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
