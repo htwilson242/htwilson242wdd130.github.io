@@ -285,9 +285,12 @@ footer a:hover {
 }
 
 #siteplan-image {
-    display: grid;
-    width: 800px;
-    justify-self: center;
+  display: flex;
+  justify-content: center; /* horizontal */
+  align-items: center;     /* vertical */
+  width: 800px;
+}
+
 }
 
 /* =====================================
